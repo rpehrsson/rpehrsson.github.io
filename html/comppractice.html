@@ -22,16 +22,18 @@
     <a id = "next" href = "../" class = "next-nav disabled">Finish &#8250;</a>
   </div>
 
-<div style = "background-color:#f8f9fa; font-weight:bold; padding:10px; display: inline-block; margin-bottom: 30px" >
-	<p>Total amount owed if the interest is compounded </p>
-  <p>A= P(1+r)^n</p>
- </div>
+  <h2>Comparison Practice</h2>
 
  <div class = "practice-questions">
  	<div class="practice-question">
  		<div class="question-num">1.</div>
  		<div class = question-content>
- 		<div class="question">When Mr. Scott lends money on Simple Interest, you pay <input id = "question1" class = "question-input" type ="text"> each consecutive year.</div>
+ 		<div class="question">When Mr. Scott lends money on Simple Interest, you pay 
+      <select id="question1comp" class = "question-input">
+        <option value="">...</option>
+          <option value="same amount in interest">same amount in interest</option>
+          <option value="different amount in interest">different amount in interest</option>
+      </select> each consecutive year.</div>
  		<!--<button for = "hints1" id ="hint1" class="button hint-button">?</button>-->
  	</div>
  	</div>
@@ -41,7 +43,13 @@
  	<div class="practice-question">
  		<div class="question-num">2.</div>
  		<div class = question-content>
- 		<div class="question2"> When Mr. Scott lends money on Compound Interest, you pay <input id = "question2" class = "question-input" type ="text"> each consecutive year.</div>
+ 		<div class="question"> When Mr. Scott lends money on Compound Interest, you pay  
+      <select id="question2comp" class = "question-input">
+        <option value="">...</option>
+          <option value="same amount in interest">same amount in interest</option>
+          <option value="different amount in interest">different amount in interest</option>
+      </select> 
+    each consecutive year.</div>
  	</div>
  	<div id = "hints2" class = "row hints">
     <span>Hints:</span>
