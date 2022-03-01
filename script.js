@@ -15,7 +15,7 @@ const simple_interest_data ={
 	},
 
 	grid: {
-		interest: ["100"],
+		interest: ["100", "100", "100"],
 		initialAmount: "1100",
 		totalInterest: ["200", "300", "400"], 
 		amount:["1200", "1300", "1400"],
