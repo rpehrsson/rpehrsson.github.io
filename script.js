@@ -101,11 +101,11 @@ const compare_interest_data ={
 	cookieid: "comparison",
 	page:"html/comppractice.html", 
 	question1: {
-		answer: "1100"
+		answer: "same amount in interest"
 	},
 
 	question2: {
-		answer: "1210"
+		answer: "different amount in interest"
 	}
 };
 
@@ -358,7 +358,14 @@ $("#question1").keyup(function (event) {
 	event.preventDefault();
 	if (event.keyCode === 13) {
 		var num = parseInt(event.target.id.replace("question", ""));
-		if(event.target.value == simple_interest_data.practice[num-1].answer){
+		var quesData;
+		if(window.location.href.includes("si")){
+			quesData = simple_interest_data;
+		}
+		else if(window.location.href.includes("ci")) {
+			quesData = compound_interest_data;
+		}
+		if(event.target.value == quesData.practice[num-1].answer){
 			if(event.target.classList.contains("incorrect")){
   				event.target.classList.remove("incorrect");
   			}
@@ -374,7 +381,13 @@ $("#question1").keyup(function (event) {
 $("#question2").change(function (event) {
 	event.preventDefault();
 		var num = parseInt(event.target.id.replace("question", ""));
-		if(event.target.value == simple_interest_data.practice[num-1].answer){
+		if(window.location.href.includes("si")){
+			quesData = simple_interest_data;
+		}
+		else if(window.location.href.includes("ci")) {
+			quesData = compound_interest_data;
+		}
+		if(event.target.value == quesData.practice[num-1].answer){
 			if(event.target.classList.contains("incorrect")){
   				event.target.classList.remove("incorrect");
   			}
@@ -386,6 +399,33 @@ $("#question2").change(function (event) {
   		}
 });
 
+$("#question1comp").change(function(event){
+	event.preventDefault();
+	if(event.target.value == compare_interest_data.question1.answer){
+			if(event.target.classList.contains("incorrect")){
+  				event.target.classList.remove("incorrect");
+  			}
+  			event.target.classList.add("correct");
+  			completenessCheck("question-input");
+  		}
+  		else{
+  			event.target.classList.add("incorrect");
+  		}
+});
+
+$("#question2comp").change(function(event){
+	event.preventDefault();
+	if(event.target.value == compare_interest_data.question2.answer){
+			if(event.target.classList.contains("incorrect")){
+  				event.target.classList.remove("incorrect");
+  			}
+  			event.target.classList.add("correct");
+  			completenessCheck("question-input");
+  		}
+  		else{
+  			event.target.classList.add("incorrect");
+  		}
+});
 
 });
 
