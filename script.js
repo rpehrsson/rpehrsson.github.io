@@ -2,7 +2,7 @@
 
 const simple_interest_data ={
 	cookieid: "simple",
-	page:"/html/sidraganddrop.html", 
+	page:"html/sidraganddrop.html", 
 	dragQuestions: {
 		question1: {
 			hints: ["Every year, you pay $100 in interest", "$1000 + $100 + $100 = $1200"]
@@ -49,7 +49,7 @@ const simple_interest_data ={
 
 const compound_interest_data ={
 	cookieid: "compound",
-	page:"/html/cigpart1.html", 
+	page:"html/cigpart1.html", 
 	dragQuestions: {
 		question1: {
 			hints: ["Every year, you pay $100 in interest", "$1000 + $100 + $100 = $1200"]
@@ -99,7 +99,7 @@ const compound_interest_data ={
 
 const compare_interest_data ={
 	cookieid: "comparison",
-	page:"/html/comppractice.html", 
+	page:"html/comppractice.html", 
 	question1: {
 		answer: "1100"
 	},
@@ -122,7 +122,7 @@ function launchChapter(id){
 	else{
 		launchData = compare_interest_data;
 	}
-	window.location.assign(window.location.hostname+launchData.page);
+	window.location=launchData.page;
 }
 
 function navPage(num){
