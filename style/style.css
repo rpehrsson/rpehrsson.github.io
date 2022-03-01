@@ -1,0 +1,169 @@
+div {
+  box-sizing: border-box;
+}
+
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.chapter{
+	    background: #f0f8ff;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+   
+
+.chapter[disabled]{
+	cursor: auto !important;
+}
+
+.chapter[disabled]::after{
+	content : url(../assets/icons8-lock.svg);
+}
+
+.chapter[disabled]:hover{
+	border:none;
+}
+
+.chapter:hover{
+	cursor:pointer;
+	 border: #b3d7ff 2px solid;
+}
+
+
+.page-nav{
+	display: flex;
+    justify-content: space-between;
+    margin: 2em 0px;
+}
+
+.page-nav a{
+	color:#004085;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.convo{
+	background-color: #f8f9fa;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.convo span{
+	font-weight: bold;
+}
+
+.hints{
+	display: none;
+	padding: 5px;
+    background: #d0f3cf;
+    border: 2px solid #79ab77;
+    border-radius: 5px;
+    width: 70%;
+    margin: 20px;
+}
+
+.hints span{
+	color: #385437;
+    font-weight: bold;
+}
+
+a.disabled{
+	cursor: not-allowed;
+	pointer-events: none;
+	text-decoration: none;
+	color:#00408599;
+}
+
+.drag-questions{
+	display: inline-block;
+	margin-bottom: 7%;
+}
+
+.question{
+	padding: 6px;
+}
+
+.dropspace{
+	border-bottom: 2px solid #454545;
+	width: 60px;
+	height:30px;
+	content: "";
+    display: inline-block;
+}
+
+.dragger{
+	border:1px solid #454545;
+	padding:5px;
+	border-radius: 5px;
+	margin:5px;
+}
+
+.dropspace .dragger{
+	border:none;
+	margin:0px;
+}
+
+.correct{
+	background-color:#D0FF87;
+}
+
+.dropspace.correct{
+	width: auto;
+	height: auto;
+}
+
+.incorrect{
+	background-color:#FFB187;
+}
+
+
+.flex-table {
+  display: flex;
+  flex-flow: row wrap;
+  border-left: solid 1px  #d9d9d9;
+   margin:0px;
+    border-color: #1565C0;
+   position: relative;
+
+}
+
+.flex-table .hint-button{
+	position: absolute;
+    right: -30px;
+    top: 5px;
+}
+
+.flex-table.header{
+	  background: #1976D2;
+    color: white;
+}
+
+.flex-row {
+  width: calc(100% / 4);
+  text-align: center;
+  padding: 0.5em 0.5em;
+  border-right: solid 1px #1565C0;
+  border-bottom: solid 1px #1565C0;
+
+}
+
+input.flex-row{
+	border: solid 1px #1565C0;
+}
+
+.practice-question{
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.question-num{
+	display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin: 0px 15px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<title>Simple Interest Drag and Drop</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="../style/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src = "../script.js"></script>
+
+
+<body>
+	<div class="container">
+	<div class="page-nav">
+		<a id = "back" href="index.html" class="back-nav">&#8249; Back</a>
+		<a id="next" href = "sigdpart1.html" class = "next-nav disabled">Next &#8250;</a>
+	</div>
+
+	<h2>Simple Interest 1: Drag and Drop</h2>
+	<div class = "convo">
+		<p><span>You:</span> Hey Mr. Scott, Would you lend me $1000, I want to start a stationery business!</p>
+		<p><span>Mr. Scott:</span> Well, I could give you $1000. But not for free. There will be a cost. </p>
+		<p><span>You:</span> Cost? What cost?</p>
+		<p><span>Mr. Scott:</span> If I lend you $1000 today, you would need to pay me 10% more at the end of the year.</p>
+		<p><span>You:</span> 10% of $1000 is $100. I would have to pay you $100 extra?</p>
+		<p><span>Mr. Scott:</span> Yes, 10% is the cost of borrowing $1000. </p>
+		<p><span>You:</span> That's okay Mr. Scott. I will pay you $1100 at the end of the year</p>
+
+	</div>
+	<div class ="row drag-questions">
+		<div class ="question">The amount you entered initially = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag1"> </span> = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag2"> 
+		</span>
+		</div>
+		<div class ="question">The cost of borrowing the amount = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag5"> </span> = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag3"> </span></div>
+		<div class ="question">The Interest in Percentage = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag4"> </span> = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag6"> </span></div>
+		<div class ="question">The amount you need to give back in the end = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag8"> </span> = <span class="dropspace" ondrop="drop(event)" ondragover="allowDrop(event)" for = "drag7"> </span></div>
+	</div>
+	<div class = "row">
+		<div id="drag1" class = "dragger" draggable="true" ondragstart="drag(event)">$1000</div>
+		<div id="drag2" class = "dragger" draggable="true" ondragstart="drag(event)">Principal</div>
+		<div id="drag3" class = "dragger" draggable="true" ondragstart="drag(event)">Interest</div>
+		<div id="drag4" class = "dragger" draggable="true" ondragstart="drag(event)">10%</div>
+		<div id="drag5" class = "dragger" draggable="true" ondragstart="drag(event)">$100</div>
+		<div id="drag6" class = "dragger" draggable="true" ondragstart="drag(event)">Rate of Interest</div>
+		<div id="drag7" class = "dragger" draggable="true" ondragstart="drag(event)">Total Amount</div>
+		<div id="drag8" class = "dragger" draggable="true" ondragstart="drag(event)">$1100</div>
+	</div>
+
+	<!--Hint Box-->
+</div>
+</body>
+</html>

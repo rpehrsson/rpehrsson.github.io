@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<title>Compound Interest: Final Practice</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="../style/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src = "../script.js"></script>
+
+
+<body>
+  <div class ="container">
+
+  	<div class="page-nav">
+    <a id = "back" href="cidpart2.html" class="back-nav">&#8249; Back</a>
+    <a id = "next" href = "../index.html" class = "next-nav disabled">Finish &#8250;</a>
+  </div>
+
+<div style = "background-color:#f8f9fa; font-weight:bold; padding:10px; display: inline-block; margin-bottom: 30px" >
+	<p>Total amount owed if the interest is compounded </p>
+  <p>A= P(1+r)^n</p>
+ </div>
+
+ <div class = "practice-questions">
+ 	<div class="practice-question">
+ 		<div class="question-num">1.</div>
+ 		<div class = question-content>
+ 		<div class="question">Jenny has $200 in an account. She earns 10% interest per year. The interest is compounded every year. How much interest will she earn at the end of two years?</div>
+ 		<input id = "question1" class = "question-input" type ="text">
+ 		<button for = "hints1" id ="hint1" class="button hint-button">?</button>
+ 	</div>
+ 	</div>
+ 	<div id = "hints1" class = "row hints">
+    <span>Hints:</span>
+  </div>
+ 	<div class="practice-question">
+ 		<div class="question-num">2.</div>
+ 		<div class = question-content>
+ 		<div class="question">If she earns compound interest every year, Jenny’s money increases
+ 			<select id="question2" class = "question-input">
+ 				<option value="">...</option>
+  				<option value="linearly">linearly</option>
+  				<option value="exponentially">exponentially</option>
+			</select> 
+		over the years.</div>
+ 	</div>
+ 	<div id = "hints2" class = "row hints">
+    <span>Hints:</span>
+	</div>
+ 	</div>
+ </div>
+
+</div>
+</body>
+</html>

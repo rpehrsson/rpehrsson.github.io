@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<title>Compound Interest 1: First Practice</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="../style/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src = "../script.js"></script>
+
+
+<body>
+	<div class ="container">
+	<div class="page-nav">
+		<a id = "back" href="index.html" class="back-nav">&#8249; Back</a>
+		<a id="next" href = "cigpart2.html" class = "next-nav disabled">Next &#8250;</a>
+	</div>
+	<h2>Compound Interest 1: First Practice</h2>
+		<div class = "convo">
+		<p><span>You:</span> Hey Mr Scott, My stationary business is a hit! I wanted to expand, would you lend me $1000 again?</p>
+		<p><span>Mr. Scott:</span> Sure, But now, the cost of borrowing has changed! </p>
+		<p><span>You:</span> Have you increased the rate of interest Mr. Scott?</p>
+		<p><span>Mr. Scott:</span> No, the rate of interest is still 10%. But now, I also charge interest on interest.</p>
+		<p><span>You:</span> Interest on interest? What does that mean?</p>
+		<p><span>Mr. Scott:</span>  That means, you would have to pay 10% on the $1000 that I lend you, AND 10% on the $100 interest. </p>
+		<p><span>You:</span> So for the second year, I pay interest on $1100 instead of $1000? </p>
+		<p><span>Mr. Scott:</span>  That's correct, that is called compound interest! </p>
+	</div>
+	<label for="investinp" class="row">You borrow $1000 at 10% rate of interest. At the end of year 1, you will pay:</label>
+	<input class =  "answer" id = "investinp" type = "text"> <button title="Hints" for = "hints" id ="investhint1" class="button hint-button">?</button>
+	<div id = "hints" class = "row hints">
+		<span>Hints:</span>
+	</div>
+	<label for="investinp2" class="row">For the next year, you will have to pay 10% interest on total amount owed, which is $1100. How much is the new amount owed at the end of second year? </label>
+	<input class =  "answer" id = "investinp2" type = "text"> <button for = "hints2" title="Hints" id ="investhint2" class="button hint-button">?</button>
+	<div id = "hints2" class = "row hints">
+		<span>Hints:</span>
+	</div>
+
+</div>
+</body>
+</html>
