@@ -167,6 +167,7 @@ function drop(ev) {
   else{
   	if(!(ev.target.classList.contains("correct")||ev.target.classList.contains("incorrect"))){
   		ev.target.classList.add("incorrect");
+  		alert("Careful! Read the dialog again. You are asking to borrow $1000, and will have to pay 10% of that as interest, which will increase what you ultimately pay.")
   	}
   }
 
@@ -193,6 +194,7 @@ $("#investinp").keyup(function(event){
   }
   else{
   	event.target.classList.add("incorrect");
+  	alert("Not quite! You are paying $100 of interest for two years. How much will that add up to? Also, please just enter a number without the dollar sign.")
   }
 }
 
@@ -221,11 +223,14 @@ $(".interest").keyup(function(event){
 	event.preventDefault();
 	if (event.keyCode === 13) {
 		var tableData;
+		var error;
 		if(window.location.href.includes("si")){
 			tableData = simple_interest_data;
+			error = "In simple interest, the interest paid never changes!"
 		}
 		else{
 			tableData = compound_interest_data;
+			error = "Not quite! In compound interest, the interest paid will increase each year."
 		}
 		var num = parseInt(event.target.id.replace("interest", ""));
 		if(event.target.value == tableData.grid.interest[num-1]){
@@ -237,6 +242,7 @@ $(".interest").keyup(function(event){
   		}
   		else{
   			event.target.classList.add("incorrect");
+  			alert(error);
   		}
 	}
 });
@@ -249,7 +255,7 @@ $("#investhint").click(function(event){
 			alert("You have seen all of the hints for that step.")
 		}
 		else{
-			hintBox.style.display = "inline-block";
+			hintBox.style.display = "block";
 			const hint = document.createElement("div");
 			hint.className = "hint";
 			hint.innerText = simple_interest_data.question1.hints[hintCount];
@@ -310,11 +316,14 @@ $(".total-interest").keyup(function(event){
 	event.preventDefault();
 	if (event.keyCode === 13) {
 		var tableData;
+		var error;
 		if(window.location.href.includes("si")){
 			tableData = simple_interest_data;
+			error = "Not quite. Add up the interest from each year so far!";
 		}
 		else{
 			tableData = compound_interest_data;
+			error = "Not quite. Add up the interest from each year so far!";
 		}
 		var num = parseInt(event.target.id.replace("total-interest", ""));
 		if(event.target.value == tableData.grid.totalInterest[num-1]){
@@ -326,6 +335,7 @@ $(".total-interest").keyup(function(event){
   		}
   		else{
   			event.target.classList.add("incorrect");
+  			alert(error);
   		}
 	}
 });
@@ -334,11 +344,14 @@ $(".amount").keyup(function(event){
 	event.preventDefault();
 	if (event.keyCode === 13) {
 		var tableData;
+		var error;
 		if(window.location.href.includes("si")){
 			tableData = simple_interest_data;
+			error = "Not quite right. Try getting all of the yearly interest first, and then add it up for each year with what was initially borrowed.";
 		}
 		else{
 			tableData = compound_interest_data;
+			error = "Not quite right. Try getting all of the yearly interest first, and then add it up for each year with what was initially borrowed.";
 		}
 		var num = parseInt(event.target.id.replace("amount", ""));
 		if(event.target.value == tableData.grid.amount[num-1]){
@@ -350,6 +363,7 @@ $(".amount").keyup(function(event){
   		}
   		else{
   			event.target.classList.add("incorrect");
+  			alert(error);
   		}
 	}
 });
@@ -410,6 +424,7 @@ $("#question1comp").change(function(event){
   		}
   		else{
   			event.target.classList.add("incorrect");
+  			alert("Recall the definition of simple interest. The amount of interest added was the same every year.")
   		}
 });
 
@@ -424,6 +439,7 @@ $("#question2comp").change(function(event){
   		}
   		else{
   			event.target.classList.add("incorrect");
+  			alert("Recall the definition of compound interest. The amount of interest added increased every year.")
   		}
 });
 
