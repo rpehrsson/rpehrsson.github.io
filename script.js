@@ -457,6 +457,8 @@ function completenessCheck(className){
   	if(complete == true){
   		alert("Good work! You may now move on to the next section.");
   		$("#next").removeClass("disabled");
+  		$("#sidiagram").show();
+  		$("#cidiagram").show()
   	}
 
 }
