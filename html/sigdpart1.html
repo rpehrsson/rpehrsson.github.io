@@ -17,7 +17,7 @@
 	<div class ="container">
 	<div class="page-nav">
 		<a id = "back" href="sidraganddrop.html" class="back-nav">&#8249; Back</a>
-		<a id="next" href = "sigdpart2.html" class = "next-nav disabled">Next &#8250;</a>
+		<a id="next" onclick ="showExtraPractice()" class = "next-nav disabled">Next &#8250;</a>
 	</div>
 	<h2>Simple Interest 2: First Practice</h2>
 	<label for="investinp" class="row">You want to re-invest the $1000 back to his business, so he keeps the principal $1000 for another year. How much would the total amount be at the end of two years? </label>
@@ -25,6 +25,15 @@
 	<div id = "hints" class = "row hints">
 		<span>Hints:</span>
 	</div>
+	<div id="new-question" style ="display: none">
+		<label for="new-input">You get a student loan from the New Mexico Educational Assistance Foundation to pay for your educational expenses this year. Find the interest on the loan if you borrowed $2,000 at 8% for 1 year. (You may wish to use the percent key on your calculator or change 8% to .08)</label>
+		<input class =  "new-answer" id = "new-input" type = "text">
+	</div>
 </div>
+
+  <script type="text/javascript">
+    loadInitialFunctions();
+    loadTableFunctions();
+  </script>
 </body>
 </html>
