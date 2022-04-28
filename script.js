@@ -117,7 +117,7 @@ const compare_interest_data ={
 var numErrors = 0;
 
 $( document ).ready(function() {
-	if(window.location.href.includes("index")||window.location.href.endsWith(".io")){
+	if(window.location.href.includes("index")||window.location.href.endsWith(".io/")){
 		confirm("During your use of this product, we will be collecting data to better adapt your experience. However, you may retract"+
 		" consent at any time and the data will be expunged from our records. Click OK to continue, or cancel to leave the activity.");
 	}
